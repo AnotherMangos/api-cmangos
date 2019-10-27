@@ -1,0 +1,46 @@
+[api]
+listen = 127.0.0.1
+port = 5556
+requireInvite = false
+expiry = 3600
+timeout = 10
+interval = 300
+loglevel = 0
+
+[api.mysql]
+hostname = localhost
+port = 3306
+username = root
+password = mangos
+database = cmangos-api
+
+[realmd]
+hostname = localhost
+port = 3724
+
+[realmd.mysql]
+hostname = localhost
+port = 3306
+username = root
+password = mangos
+database = classicrealmd
+
+[mangosd]
+realms = MaNGOS
+
+[MaNGOS.classic]
+id = 1
+
+[MaNGOS.classic.character.mysql]
+hostname = localhost
+port = 3306
+username = root
+password = mangos
+database = classiccharacters
+
+[MaNGOS.classic.world.mysql]
+hostname = localhost
+port = 3306
+username = root
+password = mangos
+database = classicmangos
