@@ -68,7 +68,7 @@ func CreateAccount(account *AccountInfo) (AccountError, error) {
     return a, fmt.Errorf("Cannot create account")
   }
 
-  v, s := CreateSaltAndVerifier(account.Username, account.Password)
+  s, v := CreateSaltAndVerifier(account.Username, account.Password)
   stmt, err := database.Realmd.Prepare(
     `INSERT INTO account
      (username, v, s, email, joindate)

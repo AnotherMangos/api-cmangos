@@ -37,8 +37,7 @@ func swapEndian(a []byte) []byte {
 	return b
 }
 
-func CreateSaltAndVerifier(username, password string) (v, s string) {
-	h1 := createBasicHash(username, password)
+func CreateSaltAndVerifier(username, password string) (s, v string) {
 
 	maxSalt := big.NewInt(SALT_SIZE * 8)
 	minSalt := big.NewInt(SALT_SIZE * 8)
@@ -51,6 +50,12 @@ func CreateSaltAndVerifier(username, password string) (v, s string) {
 		saltInt.Add(saltInt, big.NewInt(1))
 	}
 	s = fmt.Sprintf("%X", saltInt)
+	v = CreateVerifier(username, password, s)
+	return
+}
+
+func CreateVerifier(username, password, salt string) (v string) {
+	h1 := createBasicHash(username, password)
 
 	h1Int := new(big.Int)
 	h1Int.SetString(h1, 16)
@@ -67,6 +72,8 @@ func CreateSaltAndVerifier(username, password string) (v, s string) {
 		digest[i], digest[opp] = digest[opp], digest[i]
 	}
 
+	saltInt := new(big.Int)
+	saltInt.SetString(salt, 16)
 	sha1Hasher := sha1.New()
 	sha1Hasher.Write(swapEndian(saltInt.Bytes()))
 	sha1Hasher.Write(swapEndian(digest))
