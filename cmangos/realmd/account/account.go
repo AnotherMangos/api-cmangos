@@ -89,6 +89,17 @@ func CreateAccount(account *AccountInfo) (AccountError, error) {
   }
 
   account.Id, _ = res.LastInsertId()
+
+  _, err = database.Realmd.Exec(`INSERT INTO realmcharacters (realmid, acctid, numchars) 
+    SELECT realmlist.id, account.id, 0 
+    FROM realmlist,account LEFT JOIN 
+    realmcharacters ON acctid=account.id WHERE acctid IS NULL`)
+  if err != nil {
+    logger.Error(fmt.Sprintf("Cannot create new account %s", account.Username))
+    logger.Debug(fmt.Sprintf("%v", err))
+    return a, err
+  }
+
   return a, nil
 }
 

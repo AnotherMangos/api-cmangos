@@ -38,7 +38,7 @@ func swapEndian(a []byte) []byte {
 	return b
 }
 
-func CreateSaltAndVerifier(username, password string) (s, v string) {
+func CreateSaltAndVerifier(username, password string) (v, s string) {
 	// basic hash creation VALID
 	h1 := createBasicHash(username, password)
 
