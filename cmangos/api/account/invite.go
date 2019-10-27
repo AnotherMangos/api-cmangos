@@ -35,7 +35,7 @@ func AddAccountToInviteToken(token string, id int64) error {
 }
 
 func GetInviteTokens(id int) ([]InviteInfo, error) {
-  var ii []InviteInfo
+  var ii []InviteInfo = []InviteInfo{}
   stmt, err := database.Api.Prepare(
     "SELECT token FROM invitetoken WHERE account IS NULL AND friend = ?;")
   if err != nil {

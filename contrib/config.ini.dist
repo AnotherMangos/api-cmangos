@@ -28,17 +28,17 @@ database = classicrealmd
 [mangosd]
 realms = MaNGOS
 
-[MaNGOS.classic]
+[mangosd.MaNGOS]
 id = 1
 
-[MaNGOS.classic.character.mysql]
+[mangosd.MaNGOS.character.mysql]
 hostname = localhost
 port = 3306
 username = root
 password = mangos
 database = classiccharacters
 
-[MaNGOS.classic.world.mysql]
+[mangosd.MaNGOS.world.mysql]
 hostname = localhost
 port = 3306
 username = root

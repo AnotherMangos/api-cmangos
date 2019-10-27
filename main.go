@@ -51,7 +51,7 @@ func main() {
   router.HandleFunc("/account", e_account.DoCreateAccount).Methods("POST")
   router.HandleFunc("/account/auth", e_account.DoAuthVerify).Methods("GET")
   router.HandleFunc("/account/auth", e_account.DoAuth).Methods("POST")
-  router.HandleFunc("/account/invite", e_account.DoGetInvites).Methods("GET")
+  router.HandleFunc("/account/invite", e_account.DoGetInvites).Methods("GET") // not working
   router.HandleFunc("/account/invite", e_account.DoInvite).Methods("POST")
 
   router.HandleFunc("/config", e_config.DoConfig).Methods("GET")
