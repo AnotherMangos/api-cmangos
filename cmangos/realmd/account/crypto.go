@@ -32,7 +32,7 @@ func swapEndian(a []byte) []byte {
 	size := len(a)
 	b := make([]byte, size)
 	for index := range a {
-		b[index] = a[size - 1 - index]
+		b[index] = a[size-1-index]
 	}
 	return b
 }
