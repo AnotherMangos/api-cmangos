@@ -8,7 +8,7 @@ interval = 300
 loglevel = 0
 
 [api.mysql]
-hostname = localhost
+hostname = mysql
 port = 3306
 username = root
 password = mangos
