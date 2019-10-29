@@ -1,13 +1,13 @@
-all: cmangos-api
+all: api-cmangos
 
-cmangos-api:
+api-cmangos:
 	go build
 
 clean:
-	rm -rf cmangos-api
+	rm -rf api-cmangos
 
 
 re: clean all
 
 docker-build:
-	docker build . -t steakhouse.sysroot.ovh/cmangos-api
+	docker build . -t steakhouse.sysroot.ovh/api-cmangos
