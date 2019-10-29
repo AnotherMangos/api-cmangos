@@ -6,8 +6,8 @@ import (
   "fmt"
   "strings"
 
-  api_account "metagit.org/blizzlike/cmangos-api/cmangos/api/account"
-  "metagit.org/blizzlike/cmangos-api/modules/logger"
+  api_account "github.com/CedricThomas/api-cmangos/cmangos/api/account"
+  "github.com/CedricThomas/api-cmangos/modules/logger"
 )
 
 func AuthenticateByInviteToken(w http.ResponseWriter, r *http.Request) (string, error) {

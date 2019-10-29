@@ -3,7 +3,7 @@ package character
 import (
   "fmt"
 
-  "metagit.org/blizzlike/cmangos-api/modules/logger"
+  "github.com/CedricThomas/api-cmangos/modules/logger"
 )
 
 type GuildInfo struct {

@@ -61,9 +61,9 @@ func Read(file string) (Config, error) {
   // [api.mysql]
   Settings.Api.Db.Address = c.Section("api.mysql").Key("hostname").MustString("127.0.0.1")
   Settings.Api.Db.Port = c.Section("api.mysql").Key("port").MustInt(3306)
-  Settings.Api.Db.Username = c.Section("api.mysql").Key("username").MustString("cmangos-api")
-  Settings.Api.Db.Password = c.Section("api.mysql").Key("password").MustString("cmangos-api")
-  Settings.Api.Db.Database = c.Section("api.mysql").Key("database").MustString("cmangos-api")
+  Settings.Api.Db.Username = c.Section("api.mysql").Key("username").MustString("api-cmangos")
+  Settings.Api.Db.Password = c.Section("api.mysql").Key("password").MustString("api-cmangos")
+  Settings.Api.Db.Database = c.Section("api.mysql").Key("database").MustString("api-cmangos")
 
   // [realmd]
   Settings.Realmd.Address = c.Section("realmd").Key("hostname").MustString("logon.example.org")

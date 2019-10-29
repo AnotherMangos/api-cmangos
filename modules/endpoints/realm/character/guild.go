@@ -6,10 +6,10 @@ import (
   "strconv"
   "github.com/gorilla/mux"
 
-  e_account "metagit.org/blizzlike/cmangos-api/modules/endpoints/account"
-  cmangos_realm "metagit.org/blizzlike/cmangos-api/cmangos/realmd/realm"
-  cmangos_character "metagit.org/blizzlike/cmangos-api/cmangos/mangosd/character"
-  "metagit.org/blizzlike/cmangos-api/modules/database"
+  e_account "github.com/CedricThomas/api-cmangos/modules/endpoints/account"
+  cmangos_realm "github.com/CedricThomas/api-cmangos/cmangos/realmd/realm"
+  cmangos_character "github.com/CedricThomas/api-cmangos/cmangos/mangosd/character"
+  "github.com/CedricThomas/api-cmangos/modules/database"
 )
 
 func DoCharacterGuild(w http.ResponseWriter, r *http.Request) {

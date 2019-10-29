@@ -8,16 +8,16 @@ import (
   "net/http"
   "github.com/gorilla/mux"
 
-  "metagit.org/blizzlike/cmangos-api/modules/logger"
+  "github.com/CedricThomas/api-cmangos/modules/logger"
 
-  cmangos_realm "metagit.org/blizzlike/cmangos-api/cmangos/realmd/realm"
+  cmangos_realm "github.com/CedricThomas/api-cmangos/cmangos/realmd/realm"
 
-  "metagit.org/blizzlike/cmangos-api/modules/config"
-  "metagit.org/blizzlike/cmangos-api/modules/database"
-  e_account "metagit.org/blizzlike/cmangos-api/modules/endpoints/account"
-  e_config "metagit.org/blizzlike/cmangos-api/modules/endpoints/config"
-  e_realm "metagit.org/blizzlike/cmangos-api/modules/endpoints/realm"
-  e_character "metagit.org/blizzlike/cmangos-api/modules/endpoints/realm/character"
+  "github.com/CedricThomas/api-cmangos/modules/config"
+  "github.com/CedricThomas/api-cmangos/modules/database"
+  e_account "github.com/CedricThomas/api-cmangos/modules/endpoints/account"
+  e_config "github.com/CedricThomas/api-cmangos/modules/endpoints/config"
+  e_realm "github.com/CedricThomas/api-cmangos/modules/endpoints/realm"
+  e_character "github.com/CedricThomas/api-cmangos/modules/endpoints/realm/character"
 )
 
 func main() {

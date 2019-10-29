@@ -8,9 +8,9 @@ import (
 
   "github.com/google/uuid"
 
-  api_account "metagit.org/blizzlike/cmangos-api/cmangos/api/account"
-  cmangos_account "metagit.org/blizzlike/cmangos-api/cmangos/realmd/account"
-  "metagit.org/blizzlike/cmangos-api/modules/logger"
+  api_account "github.com/CedricThomas/api-cmangos/cmangos/api/account"
+  cmangos_account "github.com/CedricThomas/api-cmangos/cmangos/realmd/account"
+  "github.com/CedricThomas/api-cmangos/modules/logger"
 )
 
 func Authenticate(w http.ResponseWriter, r *http.Request) (cmangos_account.AccountInfo, error) {

@@ -1,8 +1,8 @@
 package realm
 
 import (
-  "metagit.org/blizzlike/cmangos-api/cmangos"
-  "metagit.org/blizzlike/cmangos-api/cmangos/mangosd/character"
+  "github.com/CedricThomas/api-cmangos/cmangos"
+  "github.com/CedricThomas/api-cmangos/cmangos/mangosd/character"
 )
 
 type Realm struct {

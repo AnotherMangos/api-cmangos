@@ -5,8 +5,8 @@ import (
   "database/sql"
   _ "github.com/go-sql-driver/mysql"
 
-  "metagit.org/blizzlike/cmangos-api/modules/logger"
-  "metagit.org/blizzlike/cmangos-api/modules/config"
+  "github.com/CedricThomas/api-cmangos/modules/logger"
+  "github.com/CedricThomas/api-cmangos/modules/config"
 )
 
 type MangosdDB struct {

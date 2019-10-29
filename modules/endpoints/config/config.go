@@ -4,8 +4,8 @@ import (
   "encoding/json"
   "net/http"
 
-  api_config "metagit.org/blizzlike/cmangos-api/cmangos/api/config"
-  "metagit.org/blizzlike/cmangos-api/modules/config"
+  api_config "github.com/CedricThomas/api-cmangos/cmangos/api/config"
+  "github.com/CedricThomas/api-cmangos/modules/config"
 )
 
 func DoConfig(w http.ResponseWriter, r *http.Request) {

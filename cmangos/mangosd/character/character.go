@@ -5,7 +5,7 @@ import (
   "database/sql"
   "time"
 
-  "metagit.org/blizzlike/cmangos-api/modules/logger"
+  "github.com/CedricThomas/api-cmangos/modules/logger"
 )
 
 type CharacterInfo struct {

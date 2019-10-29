@@ -5,7 +5,7 @@ import (
   "net"
   "time"
 
-  "metagit.org/blizzlike/cmangos-api/modules/logger"
+  "github.com/CedricThomas/api-cmangos/modules/logger"
 )
 
 type DaemonInfo struct {

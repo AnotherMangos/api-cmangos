@@ -4,7 +4,7 @@ import (
   "encoding/json"
   "net/http"
 
-  cmangos_realm "metagit.org/blizzlike/cmangos-api/cmangos/realmd/realm"
+  cmangos_realm "github.com/CedricThomas/api-cmangos/cmangos/realmd/realm"
 )
 
 func DoRealmlist(w http.ResponseWriter, r *http.Request) {

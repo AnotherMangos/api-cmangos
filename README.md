@@ -1,4 +1,4 @@
-# cmangos-api
+# api-cmangos
 
 a rest api for the cmangos core database.
 

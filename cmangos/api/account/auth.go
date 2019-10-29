@@ -5,9 +5,9 @@ import (
   "time"
   "database/sql"
 
-  "metagit.org/blizzlike/cmangos-api/modules/config"
-  "metagit.org/blizzlike/cmangos-api/modules/database"
-  "metagit.org/blizzlike/cmangos-api/modules/logger"
+  "github.com/CedricThomas/api-cmangos/modules/config"
+  "github.com/CedricThomas/api-cmangos/modules/database"
+  "github.com/CedricThomas/api-cmangos/modules/logger"
 )
 
 func InviteTokenAuth(token string) bool {

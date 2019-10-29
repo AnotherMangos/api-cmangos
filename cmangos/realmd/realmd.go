@@ -3,8 +3,8 @@ package realmd
 import (
   "time"
 
-  "metagit.org/blizzlike/cmangos-api/cmangos"
-  "metagit.org/blizzlike/cmangos-api/modules/config"
+  "github.com/CedricThomas/api-cmangos/cmangos"
+  "github.com/CedricThomas/api-cmangos/modules/config"
 )
 
 func GetRealmd() cmangos.DaemonInfo {

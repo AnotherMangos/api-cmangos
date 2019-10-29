@@ -1,4 +1,4 @@
-module metagit.org/blizzlike/cmangos-api
+module github.com/CedricThomas/api-cmangos
 
 go 1.13
 
