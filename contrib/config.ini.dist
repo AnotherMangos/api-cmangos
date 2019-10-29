@@ -19,7 +19,7 @@ hostname = localhost
 port = 3724
 
 [realmd.mysql]
-hostname = localhost
+hostname = mysql
 port = 3306
 username = root
 password = mangos
@@ -32,14 +32,14 @@ realms = MaNGOS
 id = 1
 
 [mangosd.MaNGOS.character.mysql]
-hostname = localhost
+hostname = mysql
 port = 3306
 username = root
 password = mangos
 database = classiccharacters
 
 [mangosd.MaNGOS.world.mysql]
-hostname = localhost
+hostname = mysql
 port = 3306
 username = root
 password = mangos
