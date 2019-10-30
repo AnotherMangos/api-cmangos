@@ -66,7 +66,7 @@ func main() {
 
   headersOk := handlers.AllowedHeaders([]string{"*"})
   originsOk := handlers.AllowedOrigins([]string{"*"})
-  methodsOk := handlers.AllowedMethods([]string{"*"})
+  methodsOk := handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "OPTIONS"})
 
   logger.Info("Start serving http requests")
   log.Fatal(http.ListenAndServe(
