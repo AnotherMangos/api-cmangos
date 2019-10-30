@@ -15,7 +15,7 @@ password = mangos
 database = cmangosapi
 
 [realmd]
-hostname = realmd
+hostname = steakhouse.sysroot.ovh
 port = 3724
 
 [realmd.mysql]

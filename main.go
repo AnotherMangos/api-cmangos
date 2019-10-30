@@ -6,6 +6,7 @@ import (
   "os"
   "time"
   "net/http"
+  "github.com/gorilla/handlers"
   "github.com/gorilla/mux"
 
   "github.com/CedricThomas/api-cmangos/modules/logger"
@@ -63,8 +64,11 @@ func main() {
   router.HandleFunc("/realm/{realm}/character/{character}/guild",
     e_character.DoCharacterGuild).Methods("GET")
 
+  headersOk := handlers.AllowedHeaders([]string{"X-Requested-With"})
+  originsOk := handlers.AllowedOrigins([]string{"*"})
+  methodsOk := handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "OPTIONS"})
 
   logger.Info("Start serving http requests")
   log.Fatal(http.ListenAndServe(
-    fmt.Sprintf("%s:%d", config.Settings.Api.Listen, config.Settings.Api.Port), router))
+    fmt.Sprintf("%s:%d", config.Settings.Api.Listen, config.Settings.Api.Port), handlers.CORS(originsOk, headersOk, methodsOk)(router)))
 }
