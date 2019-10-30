@@ -64,9 +64,9 @@ func main() {
   router.HandleFunc("/realm/{realm}/character/{character}/guild",
     e_character.DoCharacterGuild).Methods("GET")
 
-  headersOk := handlers.AllowedHeaders([]string{"X-Requested-With"})
+  headersOk := handlers.AllowedHeaders([]string{"*"})
   originsOk := handlers.AllowedOrigins([]string{"*"})
-  methodsOk := handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "OPTIONS"})
+  methodsOk := handlers.AllowedMethods([]string{"*"})
 
   logger.Info("Start serving http requests")
   log.Fatal(http.ListenAndServe(
